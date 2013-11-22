@@ -79,11 +79,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bee.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="ImageManager.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Protagonist.h" />
     <ClInclude Include="SceneItem.h" />
     <ClInclude Include="SceneManager.h" />
@@ -93,12 +95,14 @@
     <ClInclude Include="TMXReader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bee.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Protagonist.cpp" />
     <ClCompile Include="SceneItem.cpp" />
     <ClCompile Include="SceneManager.cpp" />

@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <iostream>
+#include <vector>
+
 
 using namespace std;
 class Protagonist{
@@ -28,6 +30,8 @@ public:
 	int tilewidth;
 	int tileheight;
 	int time;
+	vector <Bee*> NOT_THE_BEES;
+	SDL_Renderer* renderer;
 
 
 

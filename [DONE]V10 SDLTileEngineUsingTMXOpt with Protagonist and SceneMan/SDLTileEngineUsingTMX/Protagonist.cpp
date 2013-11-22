@@ -1,5 +1,6 @@
 #include "Protagonist.h"
 #include <SDL.h>
+#include "Bee.h"
 Protagonist::Protagonist()
 {
 
@@ -22,6 +23,7 @@ Protagonist::Protagonist(int x,int y,const char* imagesource,SDL_Renderer* rende
 	this->boundingBox.y=y;
 	this->boundingBox.w=imagewidth/numberOfCells;
 	this->boundingBox.h=tileheight;
+	this->renderer=renderer;
 	this->texture=LoadImage(imagesource,renderer);
 
 }
@@ -40,7 +42,9 @@ Protagonist::~Protagonist()
 void Protagonist::Draw(SDL_Renderer* renderer)
 {
 	
-	
+	for(int i=0;i<NOT_THE_BEES.size;i++){
+		NOT_THE_BEES[i]->Draw(renderer);
+	}
 	SDL_RenderCopy(renderer,this->texture,&drawingRect,&boundingBox);
 	
 
@@ -73,6 +77,10 @@ void Protagonist::Update()
 	if(keystate[SDL_SCANCODE_D])
 	{
 		boundingBox.x++;
+	}
+	if(keystate[SDL_SCANCODE_SPACE])
+	{
+		NOT_THE_BEES.push_back(new Bee(x,y,"sheet.png",0,renderer));
 	}
 	Animate();
 
